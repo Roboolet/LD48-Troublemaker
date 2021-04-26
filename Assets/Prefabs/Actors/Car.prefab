@@ -223,7 +223,7 @@ MonoBehaviour:
   accel: 50
   maxspeed: 75
   speed: 0
-  maxTurnPower: 1
+  maxTurnPower: 60
   exitPoint: {fileID: 4408673850119657026}
 --- !u!50 &4408673850772299568
 Rigidbody2D:

@@ -78,9 +78,9 @@ public class Vehicle : Entity
         speed += accel * input.y * Time.deltaTime;
         speed = Mathf.Clamp(speed, -maxspeed, maxspeed);
 
-        float turnvel = Mathf.Clamp(-input.x * speed * 0.01f, -maxTurnPower, maxTurnPower);
+        float turnvel = Mathf.Clamp(-input.x * speed, -maxTurnPower, maxTurnPower);
 
-        transform.Rotate(Vector3.forward * turnvel);
+        transform.Rotate(Vector3.forward * turnvel * Time.deltaTime);
         AddVelocity(transform.right * speed);
     }
 
